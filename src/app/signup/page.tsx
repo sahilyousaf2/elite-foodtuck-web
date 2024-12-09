@@ -1,8 +1,6 @@
 import Link from "next/link";
 import React from "react"
 import Image from "next/image"
-import google from "../../../public/google.png"
-import apple from "../../../public/apple.png"
 
 export default function SignUpPage() {
   return (
