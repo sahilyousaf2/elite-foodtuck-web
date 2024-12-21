@@ -6,10 +6,11 @@ import MainCours from "@/components/MainCourse";
 import StarterMenu from "@/components/StartMenu";
 import PartnersAndClients from "@/components/PartnerClient";
 import Hero from "@/components/Hero";
-
+import Navbar from "@/components/Navbar";
 export default function Menu() {
   return (
     <div>
+      <Navbar/>
       <Hero />
       <StarterMenu />
       <MainCours />

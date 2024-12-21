@@ -1,10 +1,12 @@
 import Link from "next/link";
 import React from "react"
 import Image from "next/image"
+import Navbar from "@/components/Navbar";
 
 export default function SignUpPage() {
   return (
     <>
+    <Navbar/>
       <section className='w-full bg-[url("/heropic.png")] bg-cover bg-no-repeat bg-center py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28'>
       <div className='container mx-auto px-4'>
         <div className='flex flex-col items-center'>
@@ -71,11 +73,11 @@ export default function SignUpPage() {
           <div className="text-center mt-8">
             <p>or</p>
             <button className="w-full bg-gray-100 border text-black py-2 rounded mt-2 flex items-center justify-center">
-              <Image src={"/BsGoogle.png"} alt="Google" className="w-[20px] h-[20px] left-[16px] mr-2" />
+              {/* <Image src={"/BsGoogle.png"} alt="Google" className="w-[20px] h-[20px] left-[16px] mr-2" /> */}
               Sign up with Google
             </button>
             <button className="w-full bg-gray-100 border text-black py-2 rounded mt-2 flex items-center justify-center">
-              <Image src={"/apple.png"} alt="Apple" className="w-[24px] h-[24px] left-[16px] mr-2" />
+              {/* <Image src={"/apple.png"} alt="Apple" className="w-[24px] h-[24px] left-[16px] mr-2" /> */}
               Sign up with Apple
             </button>
           </div>

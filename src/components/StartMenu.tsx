@@ -5,10 +5,10 @@ import Heading from './Heading';
 import Image from 'next/image';
 export default function StarterMenu() {
   return (
-    <section className="w-full mx-auto mt-[120px] px-4 sm:px-6 lg:px-8">
+    <section className="w-[1170px] mx-auto mt-[120px] px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto py-16 flex flex-col lg:flex-row gap-12">
         {/* Image Section */}
-        <div className="w-full lg:w-[448px] mb-8 lg:mb-0">
+        <div className=" w-[450px] ml-2 md:ml-0 md:w-full lg:w-[448px] mb-8 lg:mb-0">
           <Image 
             src="/menu.png" 
             alt="Starter dish" 
@@ -18,12 +18,12 @@ export default function StarterMenu() {
           />
         </div>
         {/* Menu Content */}
-        <div className="w-full lg:w-1/2 lg:pl-8">
+        <div className="w-full ml-6 md:ml-0 lg:w-1/2 lg:pl-8">
           <div className="flex flex-col mb-8">
             <Coffee className="ml-2 text-[#FF9F0D]" size={24} />
             <Heading text="Starter Menu" />
           </div>
-          <div className="space-y-8">
+          <div className="space-y-8 md:w-auto w-[400px]">
             {menuItems.map((item, index) => (
               <div key={index} className="border-b border-dashed border-gray-300 pb-6">
                 <div className="flex justify-between items-start mb-2">
@@ -41,4 +41,4 @@ export default function StarterMenu() {
       </div>
     </section>
   );
-}
+} 

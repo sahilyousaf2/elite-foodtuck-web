@@ -5,10 +5,10 @@ import Heading from './Heading'
 import Image from 'next/image'
 export default function Dessert() {
   return (
-    <section className="w-full mx-auto mt-[80px] sm:mt-[120px] px-4">
+    <section className="w-[1170px] mx-auto mt-[80px] sm:mt-[120px] px-4">
       <div className="container mx-auto py-10 sm:py-16 flex flex-col md:flex-row gap-8 md:gap-[112px]">
         {/* Image Section */}
-        <div className="w-full md:w-[448px] mb-6 md:mb-0">
+        <div className="w-[450px] ml-4 md:ml-0 md:w-full lg:w-[448px] mb-8 lg:mb-0">
           <Image 
             src="/dessert.png" 
             alt="Dessert dish" 
@@ -19,13 +19,13 @@ export default function Dessert() {
         </div>
 
         {/* Menu Items Section */}
-        <div className="md:w-1/2 md:pl-8">
-          <div className="flex items-center mb-6">
+        <div className="md:w-1/2 ml-6 md:ml-0 md:pl-8">
             <Coffee className="text-[#FF9F0D]" size={24} />
+          <div className="flex items-center mb-6">
             <Heading text="Dessert" />
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 md:w-auto w-[400px]">
             {menuItems.map((item, index) => (
               <div key={index} className="border-b border-dashed border-gray-300 pb-6">
                 <div className="flex justify-between items-start mb-2">

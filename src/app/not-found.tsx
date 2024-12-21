@@ -24,14 +24,14 @@ function Hero() {
                     </div>
                 </div>
             </section>
-            <div className='h-[582px] w-[630px] mx-auto'>
+            <div className='h-[582px] md:w-[630px] mx-auto'>
                 <h1 className='text-[96px] text-[#FF9F0D] leading-[104px] font-semibold text-center pt-[120px]'>404</h1>
                 <p className='text-[32px] font-semibold leading-[40px] text-center pt-8'>Oops! Look likes something going wrong</p>
                 <p className='text-[18px] font-semibold leading-[26px]  text-center pt-8'>Page Cannot be found! well have it figured out in no time.
                     Menwhile, cheek out these fresh ideas:</p>
                 <div className='flex justify-center items-center mt-8'>
                     <button onClick={() => {
-                        router.push("/HomePage")
+                        router.push("/")
                     }} className='text-[18px] font-semibold leading-[26px] text-white w-[197px] h-[58px] bg-[#FF9F0D]'>Go to home</button>
                 </div>
             </div>
