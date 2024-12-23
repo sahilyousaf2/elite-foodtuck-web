@@ -15,6 +15,7 @@ export default function MeetOurChef() {
                             return (
 
                                 <ChefCard
+                                    key={chef.id}
                                     imageURL={chef.imageURL}
                                     name={chef.name}
                                     position={chef.position}

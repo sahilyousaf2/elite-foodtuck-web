@@ -14,7 +14,6 @@ function Blog() {
   return (
     <>
       <main>
-
         <Navbar />
         <section className='w-full bg-[url("/heropic.png")] bg-cover bg-no-repeat bg-center py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28'>
           <div className='container mx-auto px-4'>
@@ -117,7 +116,13 @@ function Blog() {
                     <span className="font-bold">Share:</span>
                     <div className="flex gap-4">
                       {['f.png', 't.png', 'i.png', 'p-black.png'].map((icon) => (
-                        <img key={icon} src={`/${icon}`} alt="" className="w-5 h-5" />
+                        <Image
+                          key={icon}
+                          src={`/${icon}`}
+                          alt={`Share on ${icon.split('.')[0]}`}
+                          width={20}
+                          height={20}
+                        />
                       ))}
                     </div>
                   </div>
@@ -132,18 +137,18 @@ function Blog() {
                     {/* Single comment */}
                     <div className="flex gap-4">
                       <div className="shrink-0">
-                        <img src="/c1.png" alt="" width={73} height={65} className="rounded-full" />
+                        <Image src="/c1.png" alt="User avatar" width={73} height={65} className="rounded-full" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-4 flex-wrap">
                           <h3 className="font-bold">Unithan</h3>
                           <button className="flex items-center gap-1 text-gray-600">
-                            <img src="/reply.png" alt="" className="w-4 h-4" />
+                            <Image src="/reply.png" alt="Reply icon" width={16} height={16} />
                             <span>Reply</span>
                           </button>
                         </div>
                         <div className="flex items-center gap-2 mt-2 text-gray-500">
-                          <img src="/CalendarBlank.png" alt="" />
+                          <Image src="/CalendarBlank.png" width={16} height={16} alt="Calendar icon" />
                           <span>Sep 4, 2022</span>
                         </div>
                         <p className="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -212,7 +217,13 @@ function Blog() {
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
                 <div className="mt-6">
-                  <img src="/social_icon.png" alt="Social icons" className="mx-auto" />
+                  <Image
+                    src="/social_icon.png"
+                    alt="Social icons"
+                    width={16}
+                    height={16}
+                    className="mx-auto"
+                  />
                 </div>
               </div>
 
@@ -220,8 +231,8 @@ function Blog() {
               <div className="border p-6">
                 <h3 className="text-xl font-bold mb-6">Recent Post</h3>
                 <div className="space-y-4">
-                  {BlogCardData.map((blog, index) => (
-                    <BlogCard key={index} imageURL={blog.imageURL} />
+                  {BlogCardData.map((blog) => (
+                    <BlogCard key={blog.id} imageURL={blog.imageURL} />
                   ))}
                 </div>
               </div>
@@ -272,7 +283,12 @@ function Blog() {
                       key={icon}
                       className="w-12 h-12 bg-gray-200 hover:bg-[#ff9f0d] transition-colors flex items-center justify-center"
                     >
-                      <img src={`/${icon}`} alt={`Social ${index + 1}`} />
+                      <Image
+                        src={`/${icon}`}
+                        alt={`Social media ${index + 1}`}
+                        width={24}
+                        height={24}
+                      />
                     </button>
                   ))}
                 </div>

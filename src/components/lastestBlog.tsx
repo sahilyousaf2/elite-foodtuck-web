@@ -15,6 +15,7 @@ export default function LastestBlog() {
                         LatestCardData.map((card) => {
                             return (
                                 <LatestCard
+                                    key={card.id}
                                     imageURL={card.imageURL}
                                     name={card.name}
 
